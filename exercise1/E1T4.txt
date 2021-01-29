@@ -1,0 +1,56 @@
+# Problem
+S3 bucket is accessed via the internet.
+
+# Solution
+Use endpoints instead to avoid going thoruhg the internet
+
+
+# Problem
+The web service is hosted by an HTTP load balancer listening on port 80.
+
+# Solution
+Use a TLS encrypted connection via HTTPS instead
+
+# Problem
+Privileged business users lack of documentation. From the diagram it is not obvious
+
+# Solution
+Describe how priviledged users access the bucket and how they identify.
+
+# Problem
+No user needs to authenticate
+
+# Solution
+Consider a federated identiy management through Cognito.
+
+# Problem
+Attack scenarios do not reflect a real scenario as they use a different internet gateway to run the simulation
+Also by adding a new internet gateway it opens another thread.
+
+# Solution
+Create a scenario where all accking attempts go through the main internet gateway
+and close the second gateway
+
+# Problem
+The security groups are not defined what they open or block
+
+# Solution
+Document which ports are opened and which not
+
+# Problems
+No NACL defined
+
+# Solution
+Add NACLs
+
+# Problem
+Web Service instance is in public network
+
+# Solution
+Move it to private network
+
+# Problem
+Concrete IAM Role and Policies are not defined
+
+# Solition
+define which policies are used

@@ -1,0 +1,20 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+- tfsec: https://github.com/tfsec/tfsec
+### Example vulnerability
+- Access Key or Security Code exposed
+
+##Scan AMI’s or containers for OS vulnerabilities
+- https://github.com/encryptogroup/amid
+- Amazon Inspector
+
+### Example vulnerability
+- SSH login enabled for root
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+- AWS config
+- AWS SecurityHub
+
+### Example vulnerability
+- Ports open to the internet
