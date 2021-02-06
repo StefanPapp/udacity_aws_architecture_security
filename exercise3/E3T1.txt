@@ -1,0 +1,6 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+There was a brute force attacks as seen in the screenshot (in the last 12 minutes). 
+
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+AWS Guardduty uses anomaly detection to detect attacks. If there is a huge number of ssh attempts it is a strong indication that it is brute force attack
