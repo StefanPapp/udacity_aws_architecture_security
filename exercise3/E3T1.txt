@@ -1,6 +1,19 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
-There was a brute force attacks as seen in the screenshot (in the last 12 minutes). 
+There was a brute force attacks as seen in the screenshot (in the last 12 minutes).
 
 
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
 AWS Guardduty uses anomaly detection to detect attacks. If there is a huge number of ssh attempts it is a strong indication that it is brute force attack
+
+Data Sources are: VPC Flow Logs, AWS CloudTrail event logs, and DNS logs
+
+According to https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_data-sources.html#guardduty_data-sources.title
+there are five data sources
+
+* AWS CloudTrail Event Logs
+* AWS CloudTrail Management Events
+* AWS CloudTrail S3 Data Events
+* VPC Flow Logs
+* DNS logs
+
+As Cloudtrail is focussed on API calls, VPC Flow Logs data will indicate that there was an attack attempt.
