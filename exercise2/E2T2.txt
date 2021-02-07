@@ -1,3 +1,13 @@
-Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+# Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
-Bonus - provide recommendations on how to remediate the vulnerabilities.
+Drilling down into the tools, we see that the cloudformation templates included various vulnerabilities
+
+S3: 4 compliance rules are not compliant. These are rulles about encryption and logging
+Ec2: 2 compliance rultes that they are not managed by SSM and not enforcign imsdv2
+Ec2: SSH is open to the world
+
+# Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+S3: Activate S3 ServerSide encryption and enforce encryption in transit with S3 Bucket policies. Enable logging
+EC2: Change the EC2 Metadata to enforce v2, consider installing agents to use SSM for manage EC2 instances
+EC2: Apply the security as shown in the later exercises to avoid SSH access via password. Restrict access not to 0.0.0.0/0, but to ip ranged that will be used to SSH.

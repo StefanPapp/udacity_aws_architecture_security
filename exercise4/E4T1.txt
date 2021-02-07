@@ -1,2 +1,2 @@
-1. AWS Shield, AWS WAF, Removing SSH access completely, restricting SSH to trusted IPs
-2. Read Only Bucket, no public buckets, role based access
+1. AWS Shield, Removing SSH access completely, restricting SSH to trusted IP-Ranges, buy a hardened ami from the AWS marketplace
+2. Restrict access to Bucket via S3 Bucket polices, avoid public buckets, use role based access, use defense in depth and encrypt bucket for instance with a customer managed key
